@@ -5,7 +5,7 @@ public class Food {
     String name;
     double price;
     int quantity;
-    java.util.Date expirationDate;
+    java.time.LocalDate expirationDate;
     boolean foodStockAvailability;
 
 }

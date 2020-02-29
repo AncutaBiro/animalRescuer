@@ -2,7 +2,8 @@ package org.fasttrackit;
 
 public class Home {
 
-    String Address;
+    String type;
+    String address;
     int squareMeters;
     int roomNumber;
 

@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
-import java.util.Date;
+/// ??? ///
+import static java.time.Month.*;
 
 /**
  * Hello world!
@@ -63,11 +64,10 @@ public class App
         food1.name = "pedigree";
         food1.foodStockAvailability = true;
         food1.quantity = 500;
-        food1.expirationDate = new Date();
-        java.util.Date date = new java.util.Date();
+        food1.expirationDate = java.time.LocalDate.of (2020, DECEMBER, 31);
         food1.price = 50;
 
-        System.out.println("favourite food: " + food1.name);
+        System.out.println("favorite food: " + food1.name);
         System.out.println("food stock availability: " + food1.foodStockAvailability);
         System.out.println("food quantity: " + food1.quantity);
         System.out.println("food expiration date: " + food1.expirationDate);
@@ -94,15 +94,43 @@ public class App
         System.out.println("medical Staff gender : " + medicalStaffReference.gender);
         System.out.println("medical Staff availability : " + medicalStaffReference.availability);
 
+        Home home1 = new Home();
+        home1.type = "house";
+        home1.address = "str Olt, nr 30, Cluj Napoca";
+        home1.squareMeters = 200;
+        home1.roomNumber = 5;
 
+        System.out.println("Home sweet home: " + home1.type);
+        System.out.println("home address: " + home1.address);
+        System.out.println("home square meters: " + home1.squareMeters);
+        System.out.println("home room number: " + home1.roomNumber);
 
+        PetShop petShop1 = new PetShop();
+        petShop1.name = "Animax";
+        petShop1.address = "str Mures, nr 20, Cluj Napoca";
+        petShop1.distance = 600;
 
+        System.out.println("The Pet Shop: " + petShop1.name);
+        System.out.println("pet shop address: " + petShop1.address);
+        System.out.println("pet shop distance from home: " + petShop1.distance);
 
+        PetPark petPark1 = new PetPark();
+        petPark1.name = "Dog Park";
+        petPark1.address = "str Primaverii, nr 15-30, Cluj Napoca";
+        petPark1.distance = 1000;
 
+        System.out.println("The Pet Park: " + petPark1.name);
+        System.out.println("pet park address: " + petPark1.address);
+        System.out.println("pet park distance from home: " + petPark1.distance);
 
+        Game game1 = new Game();
+        game1.animal = animal1;
+        game1.rescuer = rescuerReference;
+        game1.medicalstaff = medicalStaffReference;
 
-
-
+        System.out.println("This game has an animal: " + game1.animal.name);
+        System.out.println("This game has a rescuer: " + game1.rescuer.name);
+        System.out.println("This game has a medical staff: " + game1.medicalstaff.name);
 
 
 

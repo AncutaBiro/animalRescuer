@@ -2,7 +2,7 @@ package org.fasttrackit;
 
 public class PetShop {
 
-    String Address;
+    String address;
     String name;
     int distance;
 
