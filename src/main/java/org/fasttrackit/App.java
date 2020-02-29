@@ -39,8 +39,8 @@ public class App
         System.out.println("energyLevel: " + animal1.energyLevel);
         System.out.println("favoriteFood: " + animal1.favoriteFood);
         System.out.println("appetite: " + animal1.appetite);
-        System.out.println("Favourite activity: " + activity1.name);
-        System.out.println("Favourite activity: " + animal1.activity.name);
+        System.out.println("Favorite activity: " + activity1.name);
+        System.out.println("Favorite activity: " + animal1.activity.name);
         System.out.println("activity duration: " + activity1.durationMin);
         System.out.println("activity contentment level: " + activity1.contentmentLevel);
         System.out.println("activity energy spent: " + activity1.energySpent);
