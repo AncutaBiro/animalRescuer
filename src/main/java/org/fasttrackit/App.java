@@ -17,11 +17,22 @@ public class App
         animal1.type = "dog";
         animal1.name = "Beethoven";
         animal1.age = 2;
-        animal1.healthStatus = 3;
-        animal1.mood = 3;
+        animal1.healthLevel = 3;
+        animal1.moodLevel = 3;
         animal1.energyLevel = 4;
         animal1.favoriteFood = "bone";
-        animal1.appetite = 8;
+        animal1.hungerLevel = 8;
+        animal1.favoriteActivity = "chewing bones";
+
+        System.out.println("The adopted animal: " + animal1.type);
+        System.out.println("name: " + animal1.name);
+        System.out.println("health level: " + animal1.healthLevel);
+        System.out.println("age: " + animal1.age);
+        System.out.println("mood level: " + animal1.moodLevel);
+        System.out.println("energy level: " + animal1.energyLevel);
+        System.out.println("favorite food: " + animal1.favoriteFood);
+        System.out.println("hunger level: " + animal1.hungerLevel);
+        System.out.println("favorite activity: " + animal1.favoriteActivity);
 
         Activity activity1 = new Activity();
         activity1.name = "walking";
@@ -31,16 +42,8 @@ public class App
 
         animal1.activity = activity1;
 
-        System.out.println("The adopted animal: " + animal1.type);
-        System.out.println("name: " + animal1.name);
-        System.out.println("healthStatus: " + animal1.healthStatus);
-        System.out.println("age: " + animal1.age);
-        System.out.println("mood: " + animal1.mood);
-        System.out.println("energyLevel: " + animal1.energyLevel);
-        System.out.println("favoriteFood: " + animal1.favoriteFood);
-        System.out.println("appetite: " + animal1.appetite);
-        System.out.println("Favorite activity: " + activity1.name);
-        System.out.println("Favorite activity: " + animal1.activity.name);
+        System.out.println("animal activity: " + activity1.name);
+        System.out.println("animal activity: " + animal1.activity.name);
         System.out.println("activity duration: " + activity1.durationMin);
         System.out.println("activity contentment level: " + activity1.contentmentLevel);
         System.out.println("activity energy spent: " + activity1.energySpent);

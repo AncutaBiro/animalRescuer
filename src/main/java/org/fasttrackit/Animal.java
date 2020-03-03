@@ -5,11 +5,12 @@ public class Animal {
     String type;
     String name;
     int age;
-    int healthStatus;
-    int appetite;
-    int mood;
+    int healthLevel;
+    int hungerLevel;
+    int moodLevel;
     String favoriteFood;
     int energyLevel;
+    String favoriteActivity;
     Activity activity;
 
 
