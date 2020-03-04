@@ -23,6 +23,7 @@ public class App
         animal1.favoriteFood = "bone";
         animal1.hungerLevel = 8;
         animal1.favoriteActivity = "chewing bones";
+        animal1.contentmentLevel = 8;
 
         System.out.println("The adopted animal: " + animal1.type);
         System.out.println("name: " + animal1.name);
@@ -33,11 +34,12 @@ public class App
         System.out.println("favorite food: " + animal1.favoriteFood);
         System.out.println("hunger level: " + animal1.hungerLevel);
         System.out.println("favorite activity: " + animal1.favoriteActivity);
+        System.out.println("contentment level: " + animal1.contentmentLevel);
+
 
         Activity activity1 = new Activity();
         activity1.name = "walking";
         activity1.durationMin = 40;
-        activity1.contentmentLevel = 8;
         activity1.energySpent = 60;
 
         animal1.activity = activity1;
@@ -45,7 +47,6 @@ public class App
         System.out.println("animal activity: " + activity1.name);
         System.out.println("animal activity: " + animal1.activity.name);
         System.out.println("activity duration: " + activity1.durationMin);
-        System.out.println("activity contentment level: " + activity1.contentmentLevel);
         System.out.println("activity energy spent: " + activity1.energySpent);
 
         Rescuer rescuerReference = new Rescuer();
@@ -86,6 +87,7 @@ public class App
         medicalStaffReference.name = "Brad";
         medicalStaffReference.gender = "male";
         medicalStaffReference.availability = true;
+        medicalStaffReference.medicalBill = 100;
 
         veterinaryClinic1.medicalstaff = medicalStaffReference;
 
@@ -96,6 +98,7 @@ public class App
         System.out.println("medical Staff specialty : " + medicalStaffReference.specialty);
         System.out.println("medical Staff gender : " + medicalStaffReference.gender);
         System.out.println("medical Staff availability : " + medicalStaffReference.availability);
+        System.out.println("medical bill: " + medicalStaffReference.medicalBill);
 
         Home home1 = new Home();
         home1.type = "house";

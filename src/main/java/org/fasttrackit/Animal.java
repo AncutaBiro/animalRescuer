@@ -11,6 +11,7 @@ public class Animal {
     String favoriteFood;
     int energyLevel;
     String favoriteActivity;
+    int contentmentLevel;
     Activity activity;
 
 

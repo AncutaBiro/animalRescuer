@@ -6,5 +6,6 @@ public class MedicalStaff {
     String gender;
     String specialty;
     boolean availability;
+    int medicalBill;
 
 }
