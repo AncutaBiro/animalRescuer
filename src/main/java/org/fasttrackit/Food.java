@@ -6,6 +6,6 @@ public class Food {
     double price;
     int quantity;
     java.time.LocalDate expirationDate;
-    boolean foodStockAvailability;
+    boolean stockAvailability;
 
 }

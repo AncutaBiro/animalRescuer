@@ -66,13 +66,13 @@ public class App
 
         Food food1 = new Food();
         food1.name = "pedigree";
-        food1.foodStockAvailability = true;
+        food1.stockAvailability = true;
         food1.quantity = 500;
         food1.expirationDate = java.time.LocalDate.of (2020, DECEMBER, 31);
         food1.price = 50;
 
         System.out.println("favorite food: " + food1.name);
-        System.out.println("food stock availability: " + food1.foodStockAvailability);
+        System.out.println("food stock availability: " + food1.stockAvailability);
         System.out.println("food quantity: " + food1.quantity);
         System.out.println("food expiration date: " + food1.expirationDate);
         System.out.println("food price: " + food1.price);
@@ -87,7 +87,7 @@ public class App
         medicalStaffReference.name = "Brad";
         medicalStaffReference.gender = "male";
         medicalStaffReference.availability = true;
-        medicalStaffReference.medicalBill = 100;
+        medicalStaffReference.bill = 100;
 
         veterinaryClinic1.medicalstaff = medicalStaffReference;
 
@@ -98,7 +98,7 @@ public class App
         System.out.println("medical Staff specialty : " + medicalStaffReference.specialty);
         System.out.println("medical Staff gender : " + medicalStaffReference.gender);
         System.out.println("medical Staff availability : " + medicalStaffReference.availability);
-        System.out.println("medical bill: " + medicalStaffReference.medicalBill);
+        System.out.println("medical bill: " + medicalStaffReference.bill);
 
         Home home1 = new Home();
         home1.type = "house";
