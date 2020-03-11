@@ -1,6 +1,5 @@
 package org.fasttrackit;
 
-/// ??? ///
 import static java.time.Month.*;
 
 /**
@@ -35,7 +34,6 @@ public class App
         System.out.println("hunger level: " + animal1.hungerLevel);
         System.out.println("favorite activity: " + animal1.favoriteActivity);
         System.out.println("contentment level: " + animal1.contentmentLevel);
-
 
         Activity activity1 = new Activity();
         activity1.name = "walking";
@@ -82,7 +80,7 @@ public class App
         veterinaryClinic1.address = "Str. Bucegi, nr 1, Cluj Napoca";
         veterinaryClinic1.distance = 5;
 
-        MedicalStaff medicalStaffReference = new MedicalStaff();
+        MedicalStaff medicalStaffReference = new MedicalStaff("Brad", "MD", true);
         medicalStaffReference.specialty = "Vet MD";
         medicalStaffReference.name = "Brad";
         medicalStaffReference.gender = "male";
