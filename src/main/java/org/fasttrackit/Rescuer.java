@@ -9,5 +9,11 @@ public class Rescuer {
     boolean availability;
     boolean transportation;
 
+    public void feed (String Animal, String Food) {
+        System.out.println();
+
+    }
+
+
     }
 

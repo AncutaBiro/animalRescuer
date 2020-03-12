@@ -80,12 +80,14 @@ public class App
         veterinaryClinic1.address = "Str. Bucegi, nr 1, Cluj Napoca";
         veterinaryClinic1.distance = 5;
 
-        MedicalStaff medicalStaffReference = new MedicalStaff("Brad", "MD", true);
+        MedicalStaff medicalStaffReference = new MedicalStaff();
         medicalStaffReference.specialty = "Vet MD";
         medicalStaffReference.name = "Brad";
         medicalStaffReference.gender = "male";
         medicalStaffReference.availability = true;
-        medicalStaffReference.bill = 100;
+
+        Nurse nurse = new Nurse();
+        nurse.bill = 100;
 
         veterinaryClinic1.medicalstaff = medicalStaffReference;
 
@@ -96,7 +98,7 @@ public class App
         System.out.println("medical Staff specialty : " + medicalStaffReference.specialty);
         System.out.println("medical Staff gender : " + medicalStaffReference.gender);
         System.out.println("medical Staff availability : " + medicalStaffReference.availability);
-        System.out.println("medical bill: " + medicalStaffReference.bill);
+        System.out.println("medical bill: " + nurse.bill);
 
         Home home1 = new Home();
         home1.type = "house";

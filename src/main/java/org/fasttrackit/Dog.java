@@ -1,9 +1,9 @@
 package org.fasttrackit;
 
-public class Dog extends Mammal {
+public class Dog extends Animal {
 
-    int legsCount;
     boolean activeByDay;
+    boolean bite;
 
     }
 

@@ -8,6 +8,4 @@ public class Food {
     java.time.LocalDate expirationDate;
     boolean stockAvailability;
 
-
-
 }
