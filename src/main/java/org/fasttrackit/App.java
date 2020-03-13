@@ -20,10 +20,10 @@ public class App
         animal1.healthLevel = 3;
         animal1.moodLevel = 3;
         animal1.energyLevel = 4;
-        animal1.favoriteFood = "bones";
+        animal1.favoriteFood = "Pedigree";
         animal1.hungerLevel = 8;
-        animal1.favoriteActivity = "walking";
-        animal1.contentmentLevel = 8;
+        animal1.favoriteActivity = "walk";
+        animal1.contentmentLevel = 4;
 
         System.out.println("The adopted animal: " + animal1.type);
         System.out.println("name: " + animal1.name);
