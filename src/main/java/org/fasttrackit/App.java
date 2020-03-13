@@ -1,5 +1,6 @@
 package org.fasttrackit;
 
+import java.time.LocalDate;
 import static java.time.Month.*;
 
 /**
@@ -66,7 +67,7 @@ public class App
         food1.name = "pedigree";
         food1.stockAvailability = true;
         food1.quantity = 500;
-        food1.expirationDate = java.time.LocalDate.of (2020, DECEMBER, 31);
+        food1.expirationDate = LocalDate.of (2020, DECEMBER, 31);
         food1.price = 50;
 
         System.out.println("favorite food: " + food1.name);
@@ -74,6 +75,10 @@ public class App
         System.out.println("food quantity: " + food1.quantity);
         System.out.println("food expiration date: " + food1.expirationDate);
         System.out.println("food price: " + food1.price);
+
+        rescuerReference.feed (animal1, food1);
+
+
 
         VeterinaryClinic veterinaryClinic1 = new VeterinaryClinic();
         veterinaryClinic1.name = "Vet for Pet";
