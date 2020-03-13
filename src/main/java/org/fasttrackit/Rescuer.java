@@ -32,10 +32,9 @@ public class Rescuer {
             animal1.contentmentLevel = animal1.contentmentLevel + 2;
             System.out.println( animal1.name + " is super excited for taking a " + animal1.favoriteActivity + ": " + animal1.contentmentLevel);
         }
-            else if (activity1.name != animal1.favoriteActivity) {
-             animal1.contentmentLevel ++;
-            System.out.println();
-            }
+            else {
+            animal1.contentmentLevel++;
+        }
 
         System.out.println(name + " is taking " + animal1.name+ " for a " + activity1.name);
 
