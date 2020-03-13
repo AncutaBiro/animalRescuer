@@ -19,5 +19,15 @@ public class Rescuer {
 
     }
 
+    public void entertain (Animal animal1, Activity activity1) {
+
+        System.out.println(name + " is taking " + animal1.name+ " for a " + activity1.name);
+
+        animal1.contentmentLevel = animal1.contentmentLevel + 2;
+
+        System.out.println("After every " + activity1.name + " " + animal1.name + " is feeling very happy: " + animal1.contentmentLevel);
+
+    }
+
     }
 

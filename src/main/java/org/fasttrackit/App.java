@@ -20,9 +20,9 @@ public class App
         animal1.healthLevel = 3;
         animal1.moodLevel = 3;
         animal1.energyLevel = 4;
-        animal1.favoriteFood = "bone";
+        animal1.favoriteFood = "bones";
         animal1.hungerLevel = 8;
-        animal1.favoriteActivity = "chewing bones";
+        animal1.favoriteActivity = "walking";
         animal1.contentmentLevel = 8;
 
         System.out.println("The adopted animal: " + animal1.type);
@@ -37,7 +37,7 @@ public class App
         System.out.println("contentment level: " + animal1.contentmentLevel);
 
         Activity activity1 = new Activity();
-        activity1.name = "walking";
+        activity1.name = "walk";
         activity1.durationMin = 40;
         activity1.energySpent = 60;
 
@@ -64,10 +64,10 @@ public class App
         System.out.println("transportation: " + rescuerReference.transportation);
 
         Food food1 = new Food();
-        food1.name = "pedigree";
+        food1.name = "Pedigree";
         food1.stockAvailability = true;
         food1.quantity = 500;
-        food1.expirationDate = LocalDate.of (2020, DECEMBER, 31);
+        food1.expirationDate = java.time.LocalDate.of (2020, DECEMBER, 31);
         food1.price = 50;
 
         System.out.println("favorite food: " + food1.name);
@@ -76,7 +76,10 @@ public class App
         System.out.println("food expiration date: " + food1.expirationDate);
         System.out.println("food price: " + food1.price);
 
+
+
         rescuerReference.feed (animal1, food1);
+        rescuerReference.entertain(animal1, activity1);
 
 
 
