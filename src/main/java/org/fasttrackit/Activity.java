@@ -6,6 +6,7 @@ public class Activity {
     int durationMin;
     int energySpent;
 
-
-
+    public Activity(String name) {
+        this.name = name;
+    }
 }

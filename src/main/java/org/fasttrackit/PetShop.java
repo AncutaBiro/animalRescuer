@@ -6,5 +6,7 @@ public class PetShop {
     String name;
     int distance;
 
-    //java.util.Date hours;//
+    public PetShop(String address) {
+        this.address = address;
+    }
 }

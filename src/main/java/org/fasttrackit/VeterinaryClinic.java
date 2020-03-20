@@ -7,6 +7,7 @@ public class VeterinaryClinic {
     int distance;
     MedicalStaff medicalstaff;
 
-    //java.util.Date hours;//
-
+    public VeterinaryClinic(String address) {
+        this.address = address;
+    }
 }

@@ -14,7 +14,8 @@ public class Animal {
     int contentmentLevel;
     Activity activity;
 
-
-
-
+    public Animal(String name, int contentmentLevel) {
+        this.name = name;
+        this.contentmentLevel = contentmentLevel;
+    }
 }

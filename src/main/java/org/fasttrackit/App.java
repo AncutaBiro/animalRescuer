@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-import java.time.LocalDate;
+
 import static java.time.Month.*;
 
 /**
@@ -13,7 +13,7 @@ public class App
     {
         System.out.println( "Animal Rescue Game!" );
 
-        Animal animal1 = new Animal();
+        Animal animal1 = new Animal("Beethoven", 4);
         animal1.type = "dog";
         animal1.name = "Beethoven";
         animal1.age = 2;
@@ -36,7 +36,11 @@ public class App
         System.out.println("favorite activity: " + animal1.favoriteActivity);
         System.out.println("contentment level: " + animal1.contentmentLevel);
 
-        Activity activity1 = new Activity();
+        Dog dog = new Dog ("Blacky", 4, true);
+
+        Cat cat = new Cat ("Pissy", 4, true);
+
+        Activity activity1 = new Activity("walk");
         activity1.name = "walk";
         activity1.durationMin = 40;
         activity1.energySpent = 60;
@@ -48,7 +52,7 @@ public class App
         System.out.println("activity duration: " + activity1.durationMin);
         System.out.println("activity energy spent: " + activity1.energySpent);
 
-        Rescuer rescuerReference = new Rescuer();
+        Rescuer rescuerReference = new Rescuer("Jane", 10);
         rescuerReference.name = "Jane";
         rescuerReference.age = 10;
         rescuerReference.gender = "female";
@@ -63,7 +67,7 @@ public class App
         System.out.println("availability: " + rescuerReference.availability);
         System.out.println("transportation: " + rescuerReference.transportation);
 
-        Food food1 = new Food();
+        Food food1 = new Food("Pedigree", 50);
         food1.name = "Pedigree";
         food1.stockAvailability = true;
         food1.quantity = 500;
@@ -83,18 +87,18 @@ public class App
 
 
 
-        VeterinaryClinic veterinaryClinic1 = new VeterinaryClinic();
+        VeterinaryClinic veterinaryClinic1 = new VeterinaryClinic("Str. Bucegi, nr 1, Cluj Napoca");
         veterinaryClinic1.name = "Vet for Pet";
         veterinaryClinic1.address = "Str. Bucegi, nr 1, Cluj Napoca";
         veterinaryClinic1.distance = 5;
 
-        MedicalStaff medicalStaffReference = new MedicalStaff();
+        MedicalStaff medicalStaffReference = new MedicalStaff("Brad", true);
         medicalStaffReference.specialty = "Vet MD";
         medicalStaffReference.name = "Brad";
         medicalStaffReference.gender = "male";
         medicalStaffReference.availability = true;
 
-        Nurse nurse = new Nurse();
+        Nurse nurse = new Nurse("Amalia", true, 100);
         nurse.bill = 100;
 
         veterinaryClinic1.medicalstaff = medicalStaffReference;
@@ -108,7 +112,7 @@ public class App
         System.out.println("medical Staff availability : " + medicalStaffReference.availability);
         System.out.println("medical bill: " + nurse.bill);
 
-        Home home1 = new Home();
+        Home home1 = new Home("str Olt, nr 30, Cluj Napoca");
         home1.type = "house";
         home1.address = "str Olt, nr 30, Cluj Napoca";
         home1.squareMeters = 200;
@@ -119,7 +123,7 @@ public class App
         System.out.println("home square meters: " + home1.squareMeters);
         System.out.println("home room number: " + home1.roomNumber);
 
-        PetShop petShop1 = new PetShop();
+        PetShop petShop1 = new PetShop("str Mures, nr 20, Cluj Napoca");
         petShop1.name = "Animax";
         petShop1.address = "str Mures, nr 20, Cluj Napoca";
         petShop1.distance = 600;
@@ -128,7 +132,7 @@ public class App
         System.out.println("pet shop address: " + petShop1.address);
         System.out.println("pet shop distance from home: " + petShop1.distance);
 
-        PetPark petPark1 = new PetPark();
+        PetPark petPark1 = new PetPark("str Primaverii, nr 15-30, Cluj Napoca");
         petPark1.name = "Dog Park";
         petPark1.address = "str Primaverii, nr 15-30, Cluj Napoca";
         petPark1.distance = 1000;

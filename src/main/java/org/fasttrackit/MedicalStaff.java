@@ -7,11 +7,9 @@ public class MedicalStaff {
     String specialty;
     boolean availability;
 
-//    // folosirea constructorilor
-//    public MedicalStaff (String name, String specialty, boolean availability) {
-//        this.name = name;
-//        this.specialty = specialty;
-//        this.availability = availability;
-//    }
+    public MedicalStaff(String name, boolean availability) {
+        this.name = name;
+        this.availability = availability;
+    }
 
 }

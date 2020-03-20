@@ -7,7 +7,7 @@ public class Home {
     int squareMeters;
     int roomNumber;
 
-
-
-
+    public Home(String address) {
+        this.address = address;
+    }
 }

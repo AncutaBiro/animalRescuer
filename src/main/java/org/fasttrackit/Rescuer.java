@@ -10,6 +10,11 @@ public class Rescuer {
     boolean availability;
     boolean transportation;
 
+    public Rescuer(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     public void feed (Animal animal1, Food food1) {
 
         if (food1.name.equals(animal1.favoriteFood)) {

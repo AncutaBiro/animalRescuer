@@ -6,4 +6,7 @@ public class PetPark {
     String name;
     int distance;
 
+    public PetPark(String address) {
+        this.address = address;
+    }
 }
