@@ -12,11 +12,28 @@ public class Animal {
     private int energyLevel;
     private String favoriteActivity;
     private int contentmentLevel;
-    Activity activity;
+    private Activity activity;
 
-    public Animal(String name, int contentmentLevel) {
+    public Animal(String type, String name, int contentmentLevel) {
+        this.type = type;
         this.name = name;
         this.contentmentLevel = contentmentLevel;
+    }
+
+    public void translateContentmentLevel(int inputContentmentLevel) {
+
+        if (inputContentmentLevel <= 1) {
+            inputContentmentLevel = 1;
+        }
+        if (inputContentmentLevel <= 10) {
+            if (inputContentmentLevel <= 5) {
+                System.out.println(name + " is feeling alright : " + inputContentmentLevel);
+            } else {
+                System.out.println(name + " is feeling good: " + inputContentmentLevel);
+            }
+        } else {
+            System.out.println("Please enter a number between 1-10");
+        }
     }
 
     public String getType() {
@@ -99,5 +116,29 @@ public class Animal {
         this.contentmentLevel = contentmentLevel;
     }
 
+    public Activity getActivity() {
+        return activity;
     }
+
+    public void setActivity(Activity activity) {
+        this.activity = activity;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", healthLevel=" + healthLevel +
+                ", hungerLevel=" + hungerLevel +
+                ", moodLevel=" + moodLevel +
+                ", favoriteFood='" + favoriteFood + '\'' +
+                ", energyLevel=" + energyLevel +
+                ", favoriteActivity='" + favoriteActivity + '\'' +
+                ", contentmentLevel=" + contentmentLevel +
+                ", activity=" + activity +
+                '}';
+    }
+}
 

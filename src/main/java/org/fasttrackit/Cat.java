@@ -4,10 +4,26 @@ public class Cat extends Animal {
 
     private boolean purr;
 
-    public Cat(String name, int contentmentLevel, boolean purr) {
-        super(name, contentmentLevel);
+    public Cat(String type, String name, int contentmentLevel, boolean purr) {
+        super(type, name, contentmentLevel);
         this.purr = purr;
     }
+
+        public void translateContentmentLevel ( int inputContentmentLevel){
+
+            if (inputContentmentLevel <= 1) {
+                inputContentmentLevel = 1;
+            }
+            if (inputContentmentLevel <= 10) {
+                if (inputContentmentLevel <= 5) {
+                    System.out.println(getName() + " is feeling alright : " + inputContentmentLevel);
+                } else {
+                    System.out.println(getName() + " is purring: " + inputContentmentLevel);
+                }
+            } else {
+                System.out.println("Please enter a number between 1-10");
+            }
+        }
 
     public boolean isPurr() {
         return purr;
@@ -16,4 +32,5 @@ public class Cat extends Animal {
     public void setPurr(boolean purr) {
         this.purr = purr;
     }
+
 }

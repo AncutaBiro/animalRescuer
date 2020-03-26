@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 
 import static java.time.Month.*;
@@ -15,7 +16,7 @@ public class App
     {
         System.out.println( "Animal Rescue Game!" );
 
-        Animal animal1 = new Animal("Beethoven", 4);
+        Animal animal1 = new Animal("dog", "Beethoven", 8);
         animal1.setType("dog");
         //animal1.setName("Beethoven");
         animal1.setAge(2);
@@ -27,29 +28,38 @@ public class App
         animal1.setFavoriteActivity("walk");
         //animal1.setContentmentLevel(4);
 
-        System.out.println("The adopted animal: " + animal1.getType());
-        System.out.println("name: " + animal1.getName());
-        System.out.println("health level: " + animal1.getHealthLevel());
-        System.out.println("age: " + animal1.getAge());
-        System.out.println("mood level: " + animal1.getMoodLevel());
-        System.out.println("energy level: " + animal1.getEnergyLevel());
-        System.out.println("favorite food: " + animal1.getFavoriteFood());
-        System.out.println("hunger level: " + animal1.getHungerLevel());
-        System.out.println("favorite activity: " + animal1.getFavoriteActivity());
-        System.out.println("contentment level: " + animal1.getContentmentLevel());
+        System.out.println(animal1);
+//        System.out.println("The adopted animal: " + animal1.getType());
+//        System.out.println("name: " + animal1.getName());
+//        System.out.println("health level: " + animal1.getHealthLevel());
+//        System.out.println("age: " + animal1.getAge());
+//        System.out.println("mood level: " + animal1.getMoodLevel());
+//        System.out.println("energy level: " + animal1.getEnergyLevel());
+//        System.out.println("favorite food: " + animal1.getFavoriteFood());
+//        System.out.println("hunger level: " + animal1.getHungerLevel());
+//        System.out.println("favorite activity: " + animal1.getFavoriteActivity());
+//        System.out.println("contentment level: " + animal1.getContentmentLevel());
 
-//        Dog dog = new Dog ("Blacks", 4, true);
-//        Cat cat = new Cat ("Piss", 4, true);
+        animal1.translateContentmentLevel(6);
+
+        Dog dog = new Dog ("dog", "Blacks", 4, true);
+        System.out.println(dog);
+        dog.translateContentmentLevel(6);
+
+        Cat cat = new Cat ("cat", "Pissy", 4, true);
+        System.out.println(cat);
+        cat.translateContentmentLevel(6);
+
 
         Activity activity1 = new Activity("walk");
         activity1.setName("walk");
         activity1.setDurationMin(40);
         activity1.setEnergySpent(60);
 
-        animal1.activity = activity1;
+        animal1.setActivity(activity1);
 
         System.out.println("animal activity: " + activity1.getName());
-        System.out.println("animal activity: " + animal1.activity.getName());
+        System.out.println("animal activity: " + animal1.getActivity().getName());
         System.out.println("activity duration: " + activity1.getDurationMin());
         System.out.println("activity energy spent: " + activity1.getEnergySpent());
 
@@ -88,6 +98,8 @@ public class App
 
 
 
+
+
         VeterinaryClinic veterinaryClinic1 = new VeterinaryClinic("Str. Bucegi, nr 1, Cluj Napoca");
         veterinaryClinic1.setName("Vet for Pet");
         veterinaryClinic1.setAddress("Str. Bucegi, nr 1, Cluj Napoca");
@@ -102,7 +114,7 @@ public class App
         Nurse nurse = new Nurse("Amalia", true, 100);
         nurse.setBill(100);
 
-        veterinaryClinic1.medicalstaff = medicalStaffReference;
+        veterinaryClinic1.setMedicalstaff(medicalStaffReference);
 
         System.out.println("The Veterinary Clinic: " + veterinaryClinic1.getName());
         System.out.println("vet clinic address: " + veterinaryClinic1.getAddress());
