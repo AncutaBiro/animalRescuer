@@ -15,36 +15,39 @@ public class Rescuer {
         this.age = age;
     }
 
-    public void feed (Animal animal1, Food food1) {
+    public void feed (Animal animalRef, Food foodRef) {
 
-        if (food1.getName().equals(animal1.getFavoriteFood())) {
-            animal1.setContentmentLevel(animal1.getContentmentLevel() +1);
-                System.out.println(animal1.getName() + " is feeling happy for receiving his favorite food: " + animal1.getContentmentLevel());
+        if (foodRef.getName().equals(animalRef.getFavoriteFood())) {
+            animalRef.setContentmentLevel(animalRef.getContentmentLevel() +1);
+                System.out.println(animalRef.getName() + " is feeling happy for receiving his favorite food: " +
+                        animalRef.getContentmentLevel());
         }
 
-        System.out.println(name + " just gave some " + food1.getName() + " food to " + animal1.getName());
+        System.out.println(name + " just gave some " + foodRef.getName() + " food to " + animalRef.getName());
 
-        animal1.setHungerLevel(animal1.getHungerLevel() - 5);
+        animalRef.setHungerLevel(animalRef.getHungerLevel() - 5);
 
-        System.out.println( animal1.getName() + " is feeling less hungry: " + animal1.getHungerLevel());
+        System.out.println( animalRef.getName() + " is feeling less hungry: " + animalRef.getHungerLevel());
 
     }
 
-    public void entertain (Animal animal1, Activity activity1) {
+    public void entertain (Animal animalRef, Activity activityRef) {
 
-        if (activity1.getName().equals(animal1.getFavoriteActivity())) {
-            animal1.setContentmentLevel(animal1.getContentmentLevel() + 2);
-            System.out.println( animal1.getName() + " is super excited for taking a " + animal1.getFavoriteActivity() + ": " + animal1.getContentmentLevel());
+        if (activityRef.getName().equals(animalRef.getFavoriteActivity())) {
+            animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
+            System.out.println( animalRef.getName() + " is super excited for taking a " +
+                    animalRef.getFavoriteActivity() + ": " + animalRef.getContentmentLevel());
         }
             else {
-            animal1.setContentmentLevel(animal1.getContentmentLevel() +1);
+            animalRef.setContentmentLevel(animalRef.getContentmentLevel() +1);
         }
 
-        System.out.println(name + " is taking " + animal1.getName() + " for a " + activity1.getName());
+        System.out.println(name + " is taking " + animalRef.getName() + " for a " + activityRef.getName());
 
-        animal1.setContentmentLevel(animal1.getContentmentLevel() + 2);
+        animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
 
-        System.out.println("After every " + activity1.getName() + " " + animal1.getName() + " is feeling more content: " + animal1.getContentmentLevel());
+        System.out.println("After every " + activityRef.getName() + " " + animalRef.getName() + " is feeling more content: " +
+                animalRef.getContentmentLevel());
 
     }
 
