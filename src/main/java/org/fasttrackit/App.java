@@ -42,11 +42,11 @@ public class App
 
         animal1.translateContentmentLevel(6);
 
-        Dog dog = new Dog ("dog", "Blacks", 4, true);
+        Animal dog = new Dog ("dog", "Blacks", 4, true);
         System.out.println(dog);
         dog.translateContentmentLevel(6);
 
-        Cat cat = new Cat ("cat", "Pissy", 4, true);
+        Animal cat = new Cat ("cat", "Pissy", 4, true);
         System.out.println(cat);
         cat.translateContentmentLevel(6);
 
