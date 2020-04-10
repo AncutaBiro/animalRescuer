@@ -10,8 +10,7 @@ public class Rescuer {
     private boolean availability;
     private boolean transportation;
 
-    public Rescuer(String name, int age) {
-        this.name = name;
+    public Rescuer(int age) {
         this.age = age;
     }
 
