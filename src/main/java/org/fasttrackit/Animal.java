@@ -14,9 +14,8 @@ public class Animal {
     private int contentmentLevel;
     private Activity activity;
 
-    public Animal(String type, String name, int contentmentLevel) {
-        this.type = type;
-        this.name = name;
+    public Animal(int hungerLevel, int contentmentLevel) {
+        this.hungerLevel = hungerLevel;
         this.contentmentLevel = contentmentLevel;
     }
 

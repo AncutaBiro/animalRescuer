@@ -14,12 +14,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Animal Rescue Game!" );
-
         Game game = new Game();
         game.start();
-
-
 
 
 //        Animal animalRef = new Animal("dog", "Beethoven", 8);
@@ -161,14 +157,6 @@ public class App
 //        System.out.println("pet park address: " + petPark1.getAddress());
 //        System.out.println("pet park distance from home: " + petPark1.getDistance());
 //
-////        Game game1 = new Game();
-////        game1.animal = animalRef;
-////        game1.rescuer = rescuerReference;
-////        game1.medicalStaff = medicalStaffReference;
-////
-////        System.out.println("This game has an animal: " + game1.animal.getName());
-////        System.out.println("This game has a rescuer: " + game1.rescuer.getName());
-////        System.out.println("This game has a medical staff: " + game1.medicalStaff.getName());
 
     }
 }

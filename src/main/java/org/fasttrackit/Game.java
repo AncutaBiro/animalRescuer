@@ -3,66 +3,79 @@ package org.fasttrackit;
 
 import org.fasttrackit.Utils.ScannerUtils;
 
-
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 
 public class Game {
-//    Rescuer rescuer;
-//    Animal animal;
-//    MedicalStaff medicalStaff;
+
+    Animal dog = new Dog (10, 1, true);
+    Rescuer rescuer = new Rescuer(20);
+    Food food =  new Food (50);
+    Activity activity = new Activity(20);
 
     private List<Food> availableFood = new ArrayList<>();
     private Activity[] availableActivities = new Activity[3];
+    private int roundsCount = 3;
 
     public void start() {
 
+        System.out.println( "Animal Rescue Game!" );
+        System.out.println("A helpless dog needs your help. Take good care of him!");
+
         initAnimal();
         initRescuer();
+        nameAnimal();
 
-        initFood();
-        displayFood();
-        initActivities();
-        displayActivities();
-    }
+        for (int i = 1; i <= roundsCount; i++) {
 
-    private void initAnimal () {
+            if (dog.getHungerLevel() == 1 || dog.getContentmentLevel() == 10) {
+                System.out.println("\nCongratulations, you won.");}
 
-        System.out.println("Please select the preferred animal for the game: dog or cat.");
-        String preferredAnimal = ScannerUtils.nextLine();
+                else {
+            System.out.println("\n" + i + " Round");
+            requireFeeding();
+            requireActivity(); }
 
-        if (preferredAnimal.equalsIgnoreCase("cat")) {
-            Animal cat = new Cat ("birman", "Pissy", 4, true);
-            cat.setAge(3);
-            cat.setHealthLevel(2);
-            cat.setHungerLevel(5);
-            cat.setMoodLevel(5);
-            cat.setFavoriteFood("Purina");
-            cat.setEnergyLevel(3);
-            cat.setFavoriteActivity("sleeping");
-            System.out.println(cat);
+            }
         }
 
-            if (preferredAnimal.equalsIgnoreCase("dog")) {
-            Animal dog = new Dog("labrador", "Blacks", 5, true);
+
+    private void initAnimal () {
+//        String preferredAnimal = ScannerUtils.nextLine();
+            dog.setType("labrador");
             dog.setAge(9);
             dog.setHealthLevel(3);
-            dog.setHungerLevel(4);
             dog.setMoodLevel(6);
             dog.setFavoriteFood("Royal Canin");
             dog.setEnergyLevel(5);
-            dog.setFavoriteActivity("walking");
-            System.out.println(dog);
+            dog.setFavoriteActivity("Walk");
         }
 
-        }
+        // vreau sa foloresc try catch cu recursivitate, ma poti ajuta te rog.
+//        if (preferredAnimal.equalsIgnoreCase("cat")) {
+//            cat.setName("to be named");
+//            cat.setAge(3);
+//            cat.setHealthLevel(2);
+//            cat.setHungerLevel(5);
+//            cat.setMoodLevel(5);
+//            cat.setFavoriteFood("Purina");
+//            cat.setEnergyLevel(3);
+//            cat.setFavoriteActivity("sleeping");
+//
+//        }
+//
+//            try { if preferredAnimal== cat ; if preferredAnimal== dog}
+//        } catch (InputMismatchException e) {
+//            System.out.println("You have entered an invalid value. Please try again." );
+//        } finally {
+//            preferredAnimal = ScannerUtils.nextLine();
+//        }
 
     private String getNameFromUser () {
-        System.out.println("Please enter your name.");
-
+        System.out.println("\nPlease enter your name: ");
         // nu functioneaza recursivitatea si nu inteleg de ce??????
-
         try {
             return ScannerUtils.nextLine();
         } catch (InputMismatchException e) {
@@ -72,57 +85,62 @@ public class Game {
     }
 
         private void initRescuer () {
-            Rescuer rescuer = new Rescuer(20);
             String name = getNameFromUser();
             rescuer.setName(name);
         }
 
-        private void initFood() {
-        Food food1 = new Food("Pet Food", 50);
-        availableFood.add(food1);
+        private void nameAnimal () {
+            System.out.println("\nPlease name your animal: ");
+            String name = ScannerUtils.nextLine();
 
-        Food food2 = new Food("Royal Canin", 50);
-        availableFood.add(food2);
-    }
+            dog.setName(name);
+            System.out.println("These are the general information for " + dog.getName());
+            System.out.println(dog);
+            }
 
-        private void displayFood () {
-            System.out.println("The available foods for your animal are: ");
+        private void requireFeeding () {
+            Food food1 = new Food(50);
+            food1.setName("Pet Food");
+            availableFood.add(food1);
 
-            // for-each
+            Food food2 = new Food(50);
+            food2.setName("Royal Canin");
+            availableFood.add(food2);
+
+            System.out.println("\nIt's time to feed the dog. The available foods for "+ dog.getName() + " are: ");
+
             for (Food food : availableFood) {
-                { System.out.println(food.getName()); }
+                System.out.println(food.getName());
             }
-            // classic for loop
-            for (int i = 0; i < availableFood.size(); i++) {
-                { System.out.println(availableFood.get(i).getName());}
-            }
-        }
 
-        private void initActivities () {
-            Activity activity1 = new Activity("walk");
+            System.out.println("\nPlease select the food and feed the dog: ");
+            String chosenFood = ScannerUtils.nextLine();
+
+            food.setName(chosenFood);
+            rescuer.feed(dog, food);
+            }
+
+        private void requireActivity () {
+            Activity activity1 = new Activity(30);
             activity1.setName("Play");
             availableActivities[0] = activity1;
 
-            Activity activity2 = new Activity("walk");
-            activity2.setName("Run");
+            Activity activity2 = new Activity(10);
+            activity2.setName("Walk");
             availableActivities[1] = activity2;
-        }
 
-        private void displayActivities () {
+            System.out.println("\nIt's time to entertain the dog. The available activities for " + dog.getName() +  " are: ");
 
-            System.out.println("The available activities for your animal are: ");
-
-            // classic for loop
         for (int i=0; i < availableActivities.length; i++) {
             if (availableActivities[i] != null) {
                 System.out.println(availableActivities[i].getName());
             }
         }
-             // for-each
-            for (Activity activity : availableActivities) {
-                if (activity != null) {
-                    System.out.println(activity.getName());
-                }
-            }
+            System.out.println("\nPlease select the activity and entertain the dog: ");
+            String chosenActivity = ScannerUtils.nextLine();
+
+            activity.setName(chosenActivity);
+            rescuer.entertain(dog, activity);
         }
-    }
+
+}

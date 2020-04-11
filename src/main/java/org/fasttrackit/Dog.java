@@ -4,8 +4,8 @@ public class Dog extends Animal {
 
     private boolean bite;
 
-    public Dog(String type, String name, int contentmentLevel, boolean bite) {
-        super(type, name, contentmentLevel);
+    public Dog(int hungerLevel, int contentmentLevel, boolean bite) {
+        super(hungerLevel, contentmentLevel);
         this.bite = bite;
     }
 

@@ -16,15 +16,13 @@ public class Rescuer {
 
     public void feed (Animal animalRef, Food foodRef) {
 
-        if (foodRef.getName().equals(animalRef.getFavoriteFood())) {
+        if (foodRef.getName().equalsIgnoreCase(animalRef.getFavoriteFood())) {
             animalRef.setContentmentLevel(animalRef.getContentmentLevel() +1);
                 System.out.println(animalRef.getName() + " is feeling happy for receiving his favorite food: " +
                         animalRef.getContentmentLevel());
         }
 
-        System.out.println(name + " just gave some " + foodRef.getName() + " food to " + animalRef.getName());
-
-        animalRef.setHungerLevel(animalRef.getHungerLevel() - 5);
+        animalRef.setHungerLevel(animalRef.getHungerLevel() - 2);
 
         System.out.println( animalRef.getName() + " is feeling less hungry: " + animalRef.getHungerLevel());
 
@@ -32,21 +30,18 @@ public class Rescuer {
 
     public void entertain (Animal animalRef, Activity activityRef) {
 
-        if (activityRef.getName().equals(animalRef.getFavoriteActivity())) {
+        if (activityRef.getName().equalsIgnoreCase(animalRef.getFavoriteActivity())) {
             animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
-            System.out.println( animalRef.getName() + " is super excited for taking a " +
+            System.out.println( animalRef.getName() + " is excited for taking a " +
                     animalRef.getFavoriteActivity() + ": " + animalRef.getContentmentLevel());
         }
             else {
             animalRef.setContentmentLevel(animalRef.getContentmentLevel() +1);
         }
 
-        System.out.println(name + " is taking " + animalRef.getName() + " for a " + activityRef.getName());
-
         animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
 
-        System.out.println("After every " + activityRef.getName() + " " + animalRef.getName() + " is feeling more content: " +
-                animalRef.getContentmentLevel());
+        System.out.println(animalRef.getName() + " is feeling more content: " + animalRef.getContentmentLevel());
 
     }
 

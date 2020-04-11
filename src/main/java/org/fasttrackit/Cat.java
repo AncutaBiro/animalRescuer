@@ -4,8 +4,8 @@ public class Cat extends Animal {
 
     private boolean purr;
 
-    public Cat(String type, String name, int contentmentLevel, boolean purr) {
-        super(type, name, contentmentLevel);
+    public Cat(int hungerLevel, int contentmentLevel, boolean purr) {
+        super(hungerLevel, contentmentLevel);
         this.purr = purr;
     }
 

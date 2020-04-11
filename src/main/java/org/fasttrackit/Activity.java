@@ -6,8 +6,8 @@ public class Activity {
     private int durationMin;
     private int energySpent;
 
-    public Activity(String name) {
-        this.name = name;
+    public Activity(int durationMin) {
+        this.durationMin = durationMin;
     }
 
     public String getName() {
