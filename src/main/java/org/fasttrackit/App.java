@@ -158,5 +158,26 @@ public class App
 //        System.out.println("pet park distance from home: " + petPark1.getDistance());
 //
 
+        // vreau sa foloresc try catch cu recursivitate, ma poti ajuta te rog.
+//        if (preferredAnimal.equalsIgnoreCase("cat")) {
+//            cat.setName("to be named");
+//            cat.setAge(3);
+//            cat.setHealthLevel(2);
+//            cat.setHungerLevel(5);
+//            cat.setMoodLevel(5);
+//            cat.setFavoriteFood("Purina");
+//            cat.setEnergyLevel(3);
+//            cat.setFavoriteActivity("sleeping");
+//
+//        }
+//
+//            try { if preferredAnimal== cat ; if preferredAnimal== dog}
+//        } catch (InputMismatchException e) {
+//            System.out.println("You have entered an invalid value. Please try again." );
+//        } finally {
+//            preferredAnimal = ScannerUtils.nextLine();
+//        }
+
+
     }
 }

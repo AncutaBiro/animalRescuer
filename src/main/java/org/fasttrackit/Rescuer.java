@@ -17,7 +17,8 @@ public class Rescuer {
     public void feed (Animal animalRef, Food foodRef) {
 
         if (foodRef.getName().equalsIgnoreCase(animalRef.getFavoriteFood())) {
-            animalRef.setContentmentLevel(animalRef.getContentmentLevel() +1);
+            animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 1 );
+            animalRef.setHungerLevel(animalRef.getHungerLevel() - 1 );
                 System.out.println(animalRef.getName() + " is feeling happy for receiving his favorite food: " +
                         animalRef.getContentmentLevel());
         }
@@ -31,15 +32,12 @@ public class Rescuer {
     public void entertain (Animal animalRef, Activity activityRef) {
 
         if (activityRef.getName().equalsIgnoreCase(animalRef.getFavoriteActivity())) {
-            animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
+            animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 1);
             System.out.println( animalRef.getName() + " is excited for taking a " +
                     animalRef.getFavoriteActivity() + ": " + animalRef.getContentmentLevel());
         }
-            else {
-            animalRef.setContentmentLevel(animalRef.getContentmentLevel() +1);
-        }
 
-        animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
+            animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
 
         System.out.println(animalRef.getName() + " is feeling more content: " + animalRef.getContentmentLevel());
 
