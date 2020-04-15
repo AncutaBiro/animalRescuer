@@ -4,8 +4,9 @@ import org.fasttrackit.Utils.ScannerUtils;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
-public class Game {
+public class Game<n> {
 
     Animal dog = new Dog (10, 1, true);
     Rescuer rescuer = new Rescuer(20);
@@ -35,7 +36,7 @@ public class Game {
         if (dog.getHungerLevel() <= 1 || dog.getContentmentLevel() >= 10) {
         System.out.println("\nCongratulations " + rescuer.getName() + "! You've rescued the dog.");}
         else {
-        System.out.println("\nUnfortunately, you lost.");}
+        System.out.println("\nUnfortunately, you lost. Please try again.");}
 
     }
 
@@ -50,14 +51,26 @@ public class Game {
         }
 
         private String getNameFromUser () {
-        System.out.println("\nPlease enter your name: ");
-        // nu functioneaza recursivitatea si nu inteleg de ce??????
+            System.out.println("\nPlease enter your name: ");
+            String name = ScannerUtils.nextLine();
+
+//            if (name.matches("[a-zA-Z]+")) {
+//                System.out.println("Welcome " + name + "!");
+//            } else {
+//                System.out.println("You have entered an invalid value. Please try again.");
+//                return getNameFromUser();
+//            } return name;
+//        }
+
         try {
-            return ScannerUtils.nextLine();
+        if (name.matches("[a-zA-Z]+")) {
+            System.out.println("Welcome " + name + "!");
+        }else{
+            throw new InputMismatchException();}
         } catch (InputMismatchException e) {
-            System.out.println("You have entered an invalid value. Please try again.");
-            return getNameFromUser();
-        }
+        System.out.println("You have entered an invalid value. Please try again.");
+        return getNameFromUser();
+        } return name;
     }
 
         private void initRescuer () {
@@ -68,8 +81,8 @@ public class Game {
         private void nameAnimal () {
             System.out.println("\nPlease name your animal: ");
             String name = ScannerUtils.nextLine();
-
             dog.setName(name);
+
             System.out.println("These are the general information for " + dog.getName());
             System.out.println(dog);
             }
@@ -91,8 +104,10 @@ public class Game {
         private void requireFeeding () {
             System.out.println("It's time to feed the dog. The available foods for "+ dog.getName() + " are: ");
 
+            int foodNumber = 1;
             for (Food food : availableFood) {
-                System.out.println(food.getName());
+                System.out.println(foodNumber + ". " + food.getName());
+                foodNumber++;
             }
 
             System.out.println("\nPlease select the food and feed the dog: ");
@@ -122,7 +137,7 @@ public class Game {
 
         for (int i=0; i < availableActivities.length; i++) {
             if (availableActivities[i] != null) {
-                System.out.println(availableActivities[i].getName());
+                System.out.println((i+1) + ". " + availableActivities[i].getName());
             }
         }
             System.out.println("\nPlease select the activity and entertain the dog: ");
