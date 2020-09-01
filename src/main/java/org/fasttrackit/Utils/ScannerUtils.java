@@ -18,14 +18,14 @@ public class ScannerUtils {
         }
     }
 
-        public static double nextSingleDouble () {
-            try {
-                return scanner.nextDouble();
-            } finally {
-                scanner.nextLine();
-            }
-
+    public static double nextSingleDouble() {
+        try {
+            return scanner.nextDouble();
+        } finally {
+            scanner.nextLine();
         }
 
     }
+
+}
 

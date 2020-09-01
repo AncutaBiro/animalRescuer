@@ -14,30 +14,30 @@ public class Rescuer {
         this.age = age;
     }
 
-    public void feed (Animal animalRef, Food foodRef) {
+    public void feed(Animal animalRef, Food foodRef) {
 
         if (foodRef.getName().equalsIgnoreCase(animalRef.getFavoriteFood())) {
-            animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 1 );
-            animalRef.setHungerLevel(animalRef.getHungerLevel() - 1 );
-                System.out.println(animalRef.getName() + " is feeling happy for receiving his favorite food: " +
-                        animalRef.getContentmentLevel());
+            animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 1);
+            animalRef.setHungerLevel(animalRef.getHungerLevel() - 1);
+            System.out.println(animalRef.getName() + " is feeling happy for receiving his favorite food: " +
+                    animalRef.getContentmentLevel());
         }
 
         animalRef.setHungerLevel(animalRef.getHungerLevel() - 2);
 
-        System.out.println( animalRef.getName() + " is feeling less hungry: " + animalRef.getHungerLevel());
+        System.out.println(animalRef.getName() + " is feeling less hungry: " + animalRef.getHungerLevel());
 
     }
 
-    public void entertain (Animal animalRef, Activity activityRef) {
+    public void entertain(Animal animalRef, Activity activityRef) {
 
         if (activityRef.getName().equalsIgnoreCase(animalRef.getFavoriteActivity())) {
             animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 1);
-            System.out.println( animalRef.getName() + " is excited for taking a " +
+            System.out.println(animalRef.getName() + " is excited for taking a " +
                     animalRef.getFavoriteActivity() + ": " + animalRef.getContentmentLevel());
         }
 
-            animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
+        animalRef.setContentmentLevel(animalRef.getContentmentLevel() + 2);
 
         System.out.println(animalRef.getName() + " is feeling more content: " + animalRef.getContentmentLevel());
 
